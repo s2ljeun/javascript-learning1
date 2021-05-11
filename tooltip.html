@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .boring-text::after{
+                background-color: yellowgreen;
+                content: " <- 먼지풀풀";
+            }
+
+            .exciting-text::after{
+                color:violet;
+                content: " <- 흥미진진!";
+            }
+
+            .ribbon{
+                background-color: skyblue;
+            }
+
+            .ribbon::after{
+                content: "멋진 주황색 상자입니다!";
+                background-color: orange;
+                border: 1px dotted black;
+            }
+
+            details{
+                border: 1px solid #aaa;
+                padding: .5em .5em 0;
+                border-radius: 4px;
+            }
+            
+            summary{
+                font-weight: bold;
+                margin: -.5em -.5em 0;
+                padding: .5em;
+            }
+
+            details[open]{
+                padding: .5em;
+            }
+
+            details[open] summary {
+                border-bottom: 1px solid #aaa;
+                margin-bottom: .5em;
+            }
+            
+            .tooltip::after{
+                position:relative;
+                
+                content:attr(data-descr);
+                
+                background-color: black;
+                
+                color: white;
+                
+                left: 10px;
+                
+                border-radius: 5px;
+                
+                padding: 5px 10px;
+                
+                opacity: 0;
+                
+                transition: 1s opacity;
+            }
+
+            .tooltip:hover::after{
+                opacity: 1;
+            }
+
+
+            </style>
+    </head>
+    <body>
+        <p class="boring-text">적당히 평범하고 심심한 글입니다.</p>
+        <p>지루하지도 흥미진진하지도 않은 글입니다.</p>
+        <p class="exciting-text">MDN 기여는 쉽고 재밌습니다.</p>
+
+        <span class="ribbon">마지막의 주황색 상자를 바라보세요.</span>
+
+        <p class="tooltip" data-descr="최고입니다!"> 툴팁을 나타냅니다. </p>
+
+        <details>
+            <summary>Hello, Name!</summary>
+                javascript example 1<br>
+                <a href="hello-name.html">Hello, name!</a>
+        </details>
+    </body>
+</html>

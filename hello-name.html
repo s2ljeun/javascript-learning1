@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <button>이름을 입력하세요.</button>
+
+<script>
+    var myHeading = document.querySelector('h1');
+    var myButton = document.querySelector('button');
+
+    function setUserName(){
+        prompt('당신의 이름은?');
+        localStorage.setItem('name', userName);
+        myHeading.textContent = 'Hello, '+ userName;
+    }
+
+    myButton.onclick = function(){
+        setUserName();
+    }
+</script>
+</body>
+</html>
