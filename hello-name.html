@@ -8,17 +8,28 @@
     <button>이름을 입력하세요.</button>
 
 <script>
-    var myHeading = document.querySelector('h1');
-    var myButton = document.querySelector('button');
+    let myHeading = document.querySelector('h1');
+    let myButton = document.querySelector('button');
 
     function setUserName(){
-        prompt('당신의 이름은?');
-        localStorage.setItem('name', userName);
-        myHeading.textContent = 'Hello, '+ userName;
-    }
+        let userName = prompt('당신의 이름은?');
+        if(!userName || userName === null){
+            setUserName();
+            } else {
+            localStorage.setItem('name', userName);
+            myHeading.textContent = 'Hello, '+ userName;
+                }
+        }
 
     myButton.onclick = function(){
         setUserName();
+    }
+
+    if(!localStorage.getItem('name')){
+        setUserName();
+    } else {
+        let storedName = localStorage.getItem('name');
+        myHeading.textContent = 'Hello, ' + storedName;
     }
 </script>
 </body>
