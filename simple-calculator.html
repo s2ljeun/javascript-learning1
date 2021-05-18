@@ -63,7 +63,7 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <button>AC</button>
+                    <button onclick="allClear()">AC</button>
                 </td>
             </tr>
         </table>
@@ -77,6 +77,11 @@
             let input = document.querySelector('#display');
             let output = document.querySelector('#answer');
             output.value = eval(input.value);
+        }
+
+        function allClear(){
+            document.querySelector('#display').value = "";
+            document.querySelector('#answer').value = "";
         }
     </script>
     </body>
