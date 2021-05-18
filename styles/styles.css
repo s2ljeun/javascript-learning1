@@ -1,1 +1,17 @@
+ul {
+    list-style: decimal;
+    max-width: 80%;
+}
 
+summary {
+    list-style: none;
+}
+
+summary::after {
+    margin-left: 10px;
+    content: "▶";
+}
+
+details[open] summary::after {
+    content: "▼";
+}
