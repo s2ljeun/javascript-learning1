@@ -3,6 +3,10 @@ ul {
     max-width: 80%;
 }
 
+li {
+    margin-bottom: 20px;
+}
+
 summary {
     list-style: none;
 }
