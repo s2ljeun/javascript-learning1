@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>쉬운 계산기</h1>
+        <input id="display">
+        <input id="answer">
+        <table>
+            <tr>
+                <td>
+                    <button id="nine" onclick="inputNum(9)">9</button>
+                </td>
+                <td>
+                    <button id="eight" onclick="inputNum(8)">8</button>
+                </td>
+                <td>
+                    <button id="seven" onclick="inputNum(7)">7</button>
+                </td>
+                <td>
+                    <button id="plus" onclick="inputNum('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="six" onclick="inputNum(6)">6</button>
+                </td>
+                <td>
+                    <button id="five" onclick="inputNum(5)">5</button>
+                </td>
+                <td>
+                    <button id="four" onclick="inputNum(4)">4</button>
+                </td>
+                <td>
+                    <button id="minus" onclick="inputNum('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="three" onclick="inputNum(3)">3</button>
+                </td>
+                <td>
+                    <button id="two" onclick="inputNum(2)">2</button>
+                </td>
+                <td>
+                    <button id="one" onclick="inputNum(1)">1</button>
+                </td>
+                <td>
+                    <button id="multiply" onclick="inputNum('*')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="zero" onclick="inputNum(0)">0</button>
+                </td>
+                <td>
+                    <button id="divide" onclick="inputNum('/')">/</button>
+                </td>
+                <td colspan="2">
+                    <button id="enter" onclick="calculate()">Enter</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button>AC</button>
+                </td>
+            </tr>
+        </table>
+    <script>
+        function inputNum(num){
+            let input = document.querySelector('#display');
+            input.value = input.value + num;
+        }
+
+        function calculate(){
+            let input = document.querySelector('#display');
+            let output = document.querySelector('#answer');
+            output.value = eval(input.value);
+        }
+    </script>
+    </body>
+</html>
