@@ -7,15 +7,11 @@
                 text-align: right;
             }
 
-            #answer{
-                text-align: center;
-            }
         </style>
     </head>
     <body>
         <h1>쉬운 계산기</h1>
         <input id="display">
-        <input id="answer">
         <table>
             <tr>
                 <td>
@@ -84,13 +80,11 @@
 
         function calculate(){
             let input = document.querySelector('#display');
-            let output = document.querySelector('#answer');
-            output.value = eval(input.value);
+            input.value = eval(input.value);
         }
 
         function allClear(){
             document.querySelector('#display').value = "";
-            document.querySelector('#answer').value = "";
         }
     </script>
     </body>
