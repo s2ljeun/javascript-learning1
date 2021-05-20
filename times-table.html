@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #output{
+            width:300px;
+            height:400px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>구구단</h1>
+    <input id="usernum">
+    <button onclick="multiply()">실행</button>
+    <div id="output">결과창</div>
+
+<script>
+    let num = document.querySelector("#usernum")
+    let out = document.querySelector("#output")
+
+    function multiply(){
+        let N = num.value
+        for(let i=1; i<=9; i++){
+            console.log(N,"*",i,"=",N*i);
+        }
+    }
+</script>
+</body>
+</html>
